@@ -1,7 +1,9 @@
 # Pokémon Emerald Textbox Simulator
 
-## [Use it at https://meejle.github.io &raquo;](https://meejle.github.io)
+## [Original Repo](https://github.com/meejle/meejle.github.io)
+A custom textbox simulator. Currently servicing 200px textbox for now. Customizable functionality coming soon.
 
+Original Readme:
 ![A Pokémon Emerald textbox. Text in image: "But despite our closeness, we don't know everything about Pokémon."](https://github.com/meejle/meejle.github.io/assets/35422415/e1a93a1a-9e13-4bef-9372-8a0b3bdb28c8)
 
 This is a laughably-simple web-based tool for [pokeemerald](https://github.com/pret/pokeemerald) ROM hacks that allows you to experiment with text wrapping and sentence lengths in your browser, without having to rebuild your ROM every time.
