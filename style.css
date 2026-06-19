@@ -3,7 +3,10 @@ body {
   color:#000!important
 }
 body,
-textarea {
+textarea,
+label,
+select,
+option {
   font-family:tbs_regular!important
 }
 @font-face {
@@ -33,6 +36,13 @@ textarea {
   color:#636363;
   overflow:hidden
 }
+label,
+select,
+option {
+  font-smooth:never!important;
+  letter-spacing:0!important;
+}
+label{font-size:32px!important;}select,option{font-size:20px!important;}
 #tips {
   width:774px;
   line-height:48px;
