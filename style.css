@@ -1,1 +1,56 @@
-a,body{color:#000!important}body,textarea{font-family:tbs_emerald!important}@font-face{font-family:tbs_emerald;src:url('pokemon_emerald.ttf')}body{font-size:32px!important;font-smooth:never!important;letter-spacing:0!important;background:url("box.gif") 20px 20px no-repeat}textarea{font-size:46px!important;line-height:54px;outline:0;background:0 0;border:0;resize:none;width:765px;height:144px;margin-left:72px;margin-top:24px;padding:20px 0 0;color:#636363;overflow:hidden}#tips{width:774px;line-height:48px;padding:22px}#tips img,.grey,.player{padding:4px;border:1px solid grey;border-radius:4px}.grey{background:#e7efe7}#tips img{margin-bottom:-6px}h1{font-size:48px}
+a,
+body {
+  color:#000!important
+}
+body,
+textarea {
+  font-family:tbs_regular!important
+}
+@font-face {
+  font-family:'tbs_regular';
+  src:url('pokemon_emerald.ttf')format('truetype');
+  font-weight:normal;
+  font-style:normal;
+}
+body {
+  font-size:32px!important;
+  font-smooth:never!important;
+  letter-spacing:0!important;
+  background:url("box.gif") 20px 20px no-repeat
+}
+textarea {
+  font-size:46px!important;
+  line-height:54px;
+  outline:0;
+  background:0 0;
+  border:0;
+  resize:none;
+  width:764px; /*The root value is equal to 199 pixel * 4; thus each in/decrement must be (8*4)*/
+  height:144px;
+  margin-left:72px;
+  margin-top:24px;
+  padding:20px 0 0;
+  color:#636363;
+  overflow:hidden
+}
+#tips {
+  width:774px;
+  line-height:48px;
+  padding:22px
+}
+#tips img,
+.grey,
+.player {
+  padding:4px;
+  border:1px solid grey;
+  border-radius:4px
+}
+.grey {
+  background:#e7efe7
+}
+#tips img {
+  margin-bottom:-6px
+}
+h1 {
+  font-size:48px
+}
