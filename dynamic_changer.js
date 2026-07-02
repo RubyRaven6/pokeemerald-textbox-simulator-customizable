@@ -1,44 +1,22 @@
-// Source - https://stackoverflow.com/a/33870712
-// Posted by OliverRadini
-// Retrieved 2026-06-19, License - CC BY-SA 3.0
+//Edited by ezatsu
 
-var widthDropdown = document.getElementById("widthOptions");
+const widthDropdown = document.getElementById("width-options");
+const root = document.documentElement;
+const textBox = document.querySelector("textarea");
 
-var lastSelected = widthDropdown.options[widthDropdown.selectedIndex].value
+let lastSelected = widthDropdown.value;
 
-var textareaWidth = document.querySelector(":root");
+widthDropdown.addEventListener("change", function () {
+    const selectedWidth = this.value;
 
-console.log(lastSelected);
+    // Save the current textarea contents under the previous width.
+    sessionStorage.setItem(lastSelected, textBox.value);
 
-widthDropdown.onchange = function(){
+    // Change the CSS custom property.
+    root.style.setProperty("--textbox-width", `${selectedWidth}px`);
 
-    currentWidth = textBox.value;
+    // Restore text previously entered for this width.
+    textBox.value = sessionStorage.getItem(selectedWidth) ?? "";
 
-    dropdownTextbox_get();
-
-    var selected = this.options[this.selectedIndex].value;
-
-    dropdownTextbox_set();
-
-    //load the current text into the last selected value
-    sessionStorage.setItem(lastSelected, currentWidth);
-
-
-    //load the new text in to the text box
-    textBox.value = sessionStorage.getItem(selected);
-
-    lastSelected = selected;
-};
-
-// Function for getting a variable value
-function dropdownTextbox_get() {
-  // Get the styles (properties and values) for the root
-  var textareaWidthStyle = getComputedStyle(textareaWidth);
-  // Alert the value of the --textbox-width variable
-  alert("The value of --textbox-width is: " + textareaWidthStyle.getPropertyValue('--textbox-width'));
-}
-
-function dropdownTextbox_set() {
-  // Set the value of variable --textbox-width to another value
-  r.style.setProperty('--textbox-width', selected);
-}
+    lastSelected = selectedWidth;
+});
