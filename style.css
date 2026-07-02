@@ -1,9 +1,15 @@
+:root {
+  --textbox-width: 796px;
+}
 a,
 body {
   color:#000!important
 }
 body,
-textarea {
+textarea,
+label,
+select,
+option {
   font-family:tbs_regular!important
 }
 @font-face {
@@ -25,7 +31,7 @@ textarea {
   background:0 0;
   border:0;
   resize:none;
-  width:764px; /*The root value is equal to 199 pixel * 4; thus each in/decrement must be (8*4)*/
+  width:var(--textbox-width); /*The root value is equal to 199 pixel * 4; thus each in/decrement must be (8*4)*/
   height:144px;
   margin-left:72px;
   margin-top:24px;
@@ -33,6 +39,13 @@ textarea {
   color:#636363;
   overflow:hidden
 }
+label,
+select,
+option {
+  font-smooth:never!important;
+  letter-spacing:0!important;
+}
+label{font-size:32px!important;}select,option{font-size:20px!important;}
 #tips {
   width:774px;
   line-height:48px;
