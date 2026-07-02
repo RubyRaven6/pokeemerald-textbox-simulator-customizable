@@ -1,3 +1,6 @@
+:root {
+  --textbox-width: 796px;
+}
 a,
 body {
   color:#000!important
@@ -28,7 +31,7 @@ textarea {
   background:0 0;
   border:0;
   resize:none;
-  width:764px; /*The root value is equal to 199 pixel * 4; thus each in/decrement must be (8*4)*/
+  width:var(--textbox-width); /*The root value is equal to 199 pixel * 4; thus each in/decrement must be (8*4)*/
   height:144px;
   margin-left:72px;
   margin-top:24px;
